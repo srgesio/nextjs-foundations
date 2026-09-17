@@ -7,6 +7,7 @@ export const metadata: Metadata = {
 
 async function getAboutData() {
     await new Promise(resolve => setTimeout(resolve, 2000))
+    // throw new Error("Something went wrong")
     return { founded: 2026, team: 'Distributed' }
 }
 
