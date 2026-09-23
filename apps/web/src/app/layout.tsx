@@ -20,6 +20,8 @@ export default function RootLayout({
             <a href="/" className="font-semibold">Home</a>
             <a href="/about" className="text-gray-600 hover:text-gray-900">About</a>
             <a href="/pricing" className="text-gray-600 hover:text-gray-900">Pricing</a>
+            <a href="/docs" className="text-gray-600 hover:text-gray-900">Docs</a>
+            <a href="/shop" className="text-gray-600 hover:text-gray-900">Shop</a>
           </nav>
         </header>
         {children}
