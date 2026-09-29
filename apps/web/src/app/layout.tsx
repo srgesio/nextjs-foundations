@@ -7,11 +7,12 @@ export const metadata: Metadata = {
   description: "VAF Web",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className="container mx-auto px-4 py-8">

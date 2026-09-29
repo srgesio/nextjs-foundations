@@ -10,7 +10,6 @@ async function fetchUserProfile(id: string) {
     joinedAt: new Date("2024-01-15"),
   };
 }
-
 async function fetchUserStats(id: string) {
   await new Promise((resolve) => setTimeout(resolve, 200));
   return { posts: 42, followers: 1234, following: 567 };
