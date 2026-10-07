@@ -23,6 +23,8 @@ export default async function RootLayout({
             <a href="/pricing" className="text-gray-600 hover:text-gray-900">Pricing</a>
             <a href="/docs" className="text-gray-600 hover:text-gray-900">Docs</a>
             <a href="/shop" className="text-gray-600 hover:text-gray-900">Shop</a>
+            <a href="/demo" className="text-gray-600 hover:text-gray-900">Demo</a>
+            <a href="/demo/cards" className="text-gray-600 hover:text-gray-900">Demo Cards</a>
           </nav>
         </header>
         {children}
