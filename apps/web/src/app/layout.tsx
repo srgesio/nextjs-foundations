@@ -1,51 +1,24 @@
-import type { Metadata } from "next";
+// Root layout: wraps ALL pages, provides html/body structure
+// Keep this minimal: no section-specific chrome here
 
+import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: process.env.NEXT_PUBLIC_APP_NAME || "Vercel Academy Foundation - Web",
-  description: "VAF Web",
+  title: "Next.js Foundations",
+  description: "Learning Next.js patterns",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-
+}) {
   return (
     <html lang="en">
-      <body className="container mx-auto px-4 py-8">
-        <header className="mb-8 border-b py-4">
-          <nav className="flex gap-4">
-            <a href="/" className="font-semibold">Home</a>
-            <a href="/about" className="text-gray-600 hover:text-gray-900">About</a>
-            <a href="/pricing" className="text-gray-600 hover:text-gray-900">Pricing</a>
-            <a href="/docs" className="text-gray-600 hover:text-gray-900">Docs</a>
-            <a href="/shop" className="text-gray-600 hover:text-gray-900">Shop</a>
-            <a href="/demo" className="text-gray-600 hover:text-gray-900">Demo</a>
-            <a href="/demo/cards" className="text-gray-600 hover:text-gray-900">Demo Cards</a>
-          </nav>
-        </header>
+      <body className="min-h-screen bg-white text-gray-900">
+        {/* Global providers would go here (theme, auth, etc.) */}
         {children}
-        <footer className="mt-8 border-t py-4 text-gray-500 text-sm">
-          © 2026 Next.js Foundations
-        </footer>
-        {/* TODO: Convert to next/script (Section 4 Lesson 3) */}
-        <script
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-          async
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'GA_MEASUREMENT_ID');
-            `,
-          }}
-        />
       </body>
     </html>
   );
