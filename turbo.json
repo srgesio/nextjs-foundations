@@ -11,7 +11,8 @@
         ".env*"
       ],
       "env": [
-        "BLOG_URL"
+        "BLOG_URL",
+        "INTERNAL_CONFIG"
       ],
       "outputs": [
         ".next/**",
