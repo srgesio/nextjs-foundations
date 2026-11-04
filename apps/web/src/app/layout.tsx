@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-white text-gray-900">
+      <body className="min-h-screen bg-background text-foreground dark">
         {/* Global providers would go here (theme, auth, etc.) */}
         {children}
       </body>

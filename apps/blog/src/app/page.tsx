@@ -38,7 +38,7 @@ export default async function BlogListingPage({ searchParams }: Props) {
       </h1>
 
       {/* Client Component for filter controls */}
-      <Suspense fallback={<div className="h-10 animate-pulse bg-gray-100" />}>
+      <Suspense fallback={<div className="h-10 animate-pulse bg-background" />}>
         <FilterControls currentCategory={category} currentSort={sort} />
       </Suspense>
 
@@ -47,7 +47,7 @@ export default async function BlogListingPage({ searchParams }: Props) {
           <li key={post.id}>
             <Link
               href={`/${post.slug}`}
-              className="block rounded-lg border p-4 hover:bg-gray-50"
+              className="block rounded-lg border p-4 hover:bg-background/50"
             >
               <h2 className="font-semibold">{post.title}</h2>
               <span className="text-sm text-gray-500">{post.category}</span>

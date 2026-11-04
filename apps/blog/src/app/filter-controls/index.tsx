@@ -50,7 +50,7 @@ export function FilterControls({ currentCategory, currentSort }: Props) {
                 <button
                     type="button"
                     onClick={() => handleCategoryChange('')}
-                    className={`rounded px-3 py-1 text-sm ${!currentCategory ? 'bg-blue-600 text-white' : 'bg-gray-100'
+                    className={`rounded px-3 py-1 text-sm ${!currentCategory ? 'bg-primary text-primary-foreground' : 'bg-muted bg-muted-foreground'
                         }`}
                 >
                     All
@@ -58,7 +58,7 @@ export function FilterControls({ currentCategory, currentSort }: Props) {
                 <button
                     type="button"
                     onClick={() => handleCategoryChange('tech')}
-                    className={`rounded px-3 py-1 text-sm ${currentCategory === 'tech' ? 'bg-blue-600 text-white' : 'bg-gray-100'
+                    className={`rounded px-3 py-1 text-sm ${currentCategory === 'tech' ? 'bg-primary text-primary-foreground' : 'bg-muted bg-muted-foreground'
                         }`}
                 >
                     Tech
@@ -66,7 +66,7 @@ export function FilterControls({ currentCategory, currentSort }: Props) {
                 <button
                     type="button"
                     onClick={() => handleCategoryChange('general')}
-                    className={`rounded px-3 py-1 text-sm ${currentCategory === 'general' ? 'bg-blue-600 text-white' : 'bg-gray-100'
+                    className={`rounded px-3 py-1 text-sm ${currentCategory === 'general' ? 'bg-primary text-primary-foreground' : 'bg-muted bg-muted-foreground'
                         }`}
                 >
                     General
@@ -88,7 +88,7 @@ export function FilterControls({ currentCategory, currentSort }: Props) {
                 <button
                     type="button"
                     onClick={clearFilters}
-                    className="text-sm text-red-600 hover:underline"
+                    className="text-sm text-destructive hover:underline"
                 >
                     Clear filters
                 </button>
